@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "packetmaster": {
+      "command": "/Users/networkze/.packetmaster-mcp/start-mcp.sh",
+      "env": {
+        "FASTMCP_SHOW_SERVER_BANNER": "false"
+      }
+    }
+  }
+}

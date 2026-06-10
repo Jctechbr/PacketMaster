@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.venv/
+uv.lock
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.DS_Store
+*.pcap
+*.pcapng
+captures/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*credentials*
+*.pem
+*.key
+secrets/
