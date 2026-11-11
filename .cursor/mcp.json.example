@@ -1,8 +1,9 @@
 {
   "mcpServers": {
     "packetmaster": {
-      "command": "/Users/networkze/.packetmaster-mcp/start-mcp.sh",
+      "command": "/Users/you/.packetmaster-mcp/start-mcp.sh",
       "env": {
+        "PACKETMASTER_ROOT": "/path/to/PacketMaster",
         "FASTMCP_SHOW_SERVER_BANNER": "false"
       }
     }

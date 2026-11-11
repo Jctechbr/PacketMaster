@@ -17,7 +17,7 @@ PacketMaster auto-detects `/Applications/Wireshark.app/Contents/MacOS/tshark` if
 ## Install
 
 ```bash
-cd "/Users/networkze/Documents/Claude Projects/PacketMaster"
+cd /path/to/PacketMaster
 uv sync --extra dev
 ```
 
@@ -31,12 +31,15 @@ cp scripts/start-mcp.sh ~/.packetmaster-mcp/start-mcp.sh
 chmod +x ~/.packetmaster-mcp/start-mcp.sh
 ```
 
+When the launcher is that copy, set `PACKETMASTER_ROOT` to the checkout. A launcher that stays inside `scripts/` finds the checkout itself.
+
 ```json
 {
   "mcpServers": {
     "packetmaster": {
-      "command": "/Users/networkze/.packetmaster-mcp/start-mcp.sh",
+      "command": "/Users/you/.packetmaster-mcp/start-mcp.sh",
       "env": {
+        "PACKETMASTER_ROOT": "/path/to/PacketMaster",
         "FASTMCP_SHOW_SERVER_BANNER": "false"
       }
     }

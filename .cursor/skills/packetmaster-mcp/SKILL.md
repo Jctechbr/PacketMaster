@@ -41,7 +41,7 @@ cp scripts/start-mcp.sh ~/.packetmaster-mcp/start-mcp.sh
 chmod +x ~/.packetmaster-mcp/start-mcp.sh
 ```
 
-2. Edit `PACKETMASTER_ROOT` inside `start-mcp.sh` if the repo moves.
+2. If the launcher is the copy under `~/.packetmaster-mcp/`, set `PACKETMASTER_ROOT` to the checkout. A launcher that stays inside `scripts/` finds the checkout itself.
 
 3. Add to `~/.cursor/mcp.json` or `.cursor/mcp.json`:
 
@@ -50,7 +50,10 @@ chmod +x ~/.packetmaster-mcp/start-mcp.sh
   "mcpServers": {
     "packetmaster": {
       "command": "/Users/you/.packetmaster-mcp/start-mcp.sh",
-      "env": { "FASTMCP_SHOW_SERVER_BANNER": "false" }
+      "env": {
+        "PACKETMASTER_ROOT": "/path/to/PacketMaster",
+        "FASTMCP_SHOW_SERVER_BANNER": "false"
+      }
     }
   }
 }

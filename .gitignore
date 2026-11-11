@@ -11,6 +11,9 @@ build/
 *.pcapng
 captures/
 
+# Local Cursor MCP config. Machine paths stay out of the public repo.
+.cursor/mcp.json
+
 # Secrets
 .env
 .env.*
